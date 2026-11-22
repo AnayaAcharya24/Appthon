@@ -1,0 +1,95 @@
+{
+  "users": [],
+  "participants": [],
+  "teams": [],
+  "team_members": [],
+  "team_invitations": [],
+  "registrations": [],
+  "project_ideas": [],
+  "project_submissions": [],
+  "submission_versions": [],
+  "uploaded_files": [],
+  "judges": [],
+  "judge_assignments": [],
+  "evaluation_scores": [],
+  "announcements": [],
+  "notifications": [],
+  "certificates": [],
+  "event_settings": {
+    "id": "default",
+    "eventStartDate": "To be announced",
+    "registrationDeadline": "To be announced",
+    "submissionDeadline": "To be announced",
+    "submissionDeadlineIso": null,
+    "finalPresentationDate": "To be announced",
+    "venueName": "To be announced",
+    "venueAddress": "To be announced",
+    "prizeInfo": "PRIZES TO BE ANNOUNCED.",
+    "eligibilityInfo": "College and university students from different academic backgrounds interested in technology, AI, entrepreneurship, design and problem-solving. Teams of 2–5 members. Cross-disciplinary teams are encouraged, subject to final rules.",
+    "officialEmail": "TO BE ANNOUNCED",
+    "officialPhone": "TO BE ANNOUNCED",
+    "studentIdRequired": false,
+    "tieBreakRules": "To be announced prior to competition start.",
+    "heroEyebrow": "SKILL AI PRESENTS",
+    "heroSupportingHeading": "WELCOME TO APPTHON.",
+    "heroDescription": "A one-month application-building challenge where students turn imagination into functional technology products.",
+    "roadmapMilestones": [
+      {
+        "week": "WEEK 01",
+        "title": "REGISTRATION & IDEA DISCOVERY",
+        "activities": [
+          "Register participants.",
+          "Create teams.",
+          "Identify a problem.",
+          "Submit an idea proposal."
+        ],
+        "expectedOutput": "Approved team and project concept.",
+        "targetDate": "To be announced"
+      },
+      {
+        "week": "WEEK 02",
+        "title": "PLANNING & PROTOTYPING",
+        "activities": [
+          "Define features.",
+          "Create user flows.",
+          "Design wireframes.",
+          "Plan UI/UX.",
+          "Plan architecture and technology stack."
+        ],
+        "expectedOutput": "Prototype and development plan.",
+        "targetDate": "To be announced"
+      },
+      {
+        "week": "WEEK 03",
+        "title": "APPLICATION DEVELOPMENT",
+        "activities": [
+          "Build frontend and backend.",
+          "Connect database.",
+          "Implement features.",
+          "Test and debug."
+        ],
+        "expectedOutput": "Working application build.",
+        "targetDate": "To be announced"
+      },
+      {
+        "week": "WEEK 04",
+        "title": "FINAL SUBMISSION & PRESENTATION",
+        "activities": [
+          "Submit application.",
+          "Upload demo video.",
+          "Upload screenshots.",
+          "Submit project details.",
+          "Present to judges."
+        ],
+        "expectedOutput": "Final demo, evaluation and results.",
+        "targetDate": "To be announced"
+      }
+    ],
+    "resultsApproved": false,
+    "resultsPublished": false,
+    "resultsApprovedByUserId": null,
+    "resultsPublishedAt": null,
+    "updatedAt": "2026-11-21T10:54:42.650Z"
+  },
+  "audit_logs": []
+}

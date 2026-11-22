@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --font-display: 'Instrument Serif', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg-primary: #080812;
+  --bg-navy: #101329;
+  --bg-violet: #211039;
+  --glow-purple: #32105C;
+  --accent-primary: #7024D8;
+  --accent-secondary: #A855F7;
+  --accent-lavender: #C4A1FF;
+  --text-primary: #FFFFFF;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #080812;
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    overflow-x: clip;
+  }
+
+  h1,
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Website-Wide Deep Navy & Subtle Violet Ambient Lighting Theme */
+.app-atmosphere {
+  background-color: #080812;
+  background-image:
+    radial-gradient(ellipse 85% 48% at 50% 0%, rgba(16, 19, 41, 0.85) 0%, rgba(8, 8, 18, 0) 68%),
+    radial-gradient(ellipse 68% 42% at 82% 22%, rgba(33, 16, 57, 0.42) 0%, rgba(8, 8, 18, 0) 65%),
+    radial-gradient(ellipse 75% 44% at 18% 46%, rgba(50, 16, 92, 0.24) 0%, rgba(8, 8, 18, 0) 68%),
+    radial-gradient(ellipse 70% 42% at 52% 72%, rgba(33, 16, 57, 0.36) 0%, rgba(8, 8, 18, 0) 70%),
+    radial-gradient(ellipse 65% 36% at 78% 92%, rgba(16, 19, 41, 0.72) 0%, rgba(8, 8, 18, 0) 70%),
+    linear-gradient(180deg, #080812 0%, #0C0F22 36%, #0D0B1D 64%, #080812 100%);
+}
+
+/* Official APPTHON Liquid Glass Surface */
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.03);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 32px rgba(4, 6, 18, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.1) 35%,
+    rgba(255, 255, 255, 0.04) 65%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Refined Transparent Glass Navbar */
+.liquid-glass-nav {
+  background: rgba(8, 12, 28, 0.24);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 10px 30px rgba(4, 6, 18, 0.22);
+  transition: background-color 280ms ease, border-color 280ms ease;
+}
+
+.liquid-glass-nav.is-scrolled {
+  background: rgba(8, 8, 16, 0.72);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Vibrant Violet / Purple Glass Primary CTA */
+.hero-btn-primary {
+  background: linear-gradient(
+    135deg,
+    rgba(112, 36, 216, 0.86) 0%,
+    rgba(166, 74, 255, 0.72) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 180, 254, 0.55);
+  box-shadow:
+    0 0 28px rgba(112, 36, 216, 0.44),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+  transition:
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    filter 240ms ease;
+}
+
+.hero-btn-primary:hover {
+  transform: scale(1.03);
+  border-color: rgba(233, 213, 255, 0.8);
+  box-shadow:
+    0 0 36px rgba(166, 74, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+  filter: brightness(1.06);
+}
+
+/* Transparent Glass Secondary CTA */
+.hero-btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transition:
+    transform 240ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.hero-btn-secondary:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.54);
+  box-shadow:
+    0 0 22px rgba(255, 255, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.hero-text-shadow {
+  text-shadow: 0 2px 28px rgba(4, 7, 20, 0.52);
+}
+
+/* Continuous Flowing Purple-to-Lavender Gradient for Highlighted Headline Words */
+.gradient-text {
+  background-image: linear-gradient(
+    90deg,
+    #9333EA,
+    #A855F7,
+    #C4A1FF,
+    #E9C6FF,
+    #FFFFFF,
+    #9333EA
+  );
+  background-size: 250% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  animation: gradient-flow 6s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-flow {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+/* Strong Editorial Weight + Smooth Left-to-Right Violet Gradient Highlight on APPTHON */
+.about-heading-serif {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-synthesis-weight: auto;
+  letter-spacing: -0.02em;
+}
+
+.about-heading-solid {
+  color: #101329;
+  -webkit-text-stroke: 0.4px #101329;
+}
+
+@keyframes about-appthon-sweep {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 200% 50%;
+  }
+}
+
+.about-appthon-gradient {
+  background-image: linear-gradient(
+    90deg,
+    #3B0764 0%,
+    #6D28D9 18%,
+    #9333EA 36%,
+    #C026D3 50%,
+    #A855F7 64%,
+    #7024D8 82%,
+    #3B0764 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.35px rgba(76, 29, 149, 0.38);
+  filter: drop-shadow(0 2px 10px rgba(147, 51, 234, 0.18));
+  animation: about-appthon-sweep 6.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-appthon-gradient {
+    animation: none;
+  }
+}
+
+/* Slow Cinematic Hero Video Zoom (1.0 -> 1.06 over 20s) */
+@keyframes hero-video-zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-hero-video {
+  animation: hero-video-zoom 20s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Subtle Hero Scroll Indicator */
+@keyframes scroll-cue {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+.animate-scroll-cue {
+  animation: scroll-cue 2.2s ease-in-out infinite;
+}
+
+/* Hero Fade-Rise Animations */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.8s ease-out both;
+}
+
+.animate-fade-rise-delay-1 {
+  animation: fade-rise 0.8s ease-out 0.2s both;
+}
+
+.animate-fade-rise-delay-2 {
+  animation: fade-rise 0.8s ease-out 0.4s both;
+}
+
+/* Subtle section hairline gradient divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-rise,
+  .animate-fade-rise-delay-1,
+  .animate-fade-rise-delay-2,
+  .animate-hero-video,
+  .animate-scroll-cue {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .gradient-text {
+    animation: none !important;
+    background-position: 50% 50% !important;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}
